@@ -1,0 +1,28 @@
+.box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: calc(100vh - 70px - 87.5px);
+  &__content {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 700px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .box__items {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &__content {
+      .box__items {
+        display: block;
+      }
+    }
+  }
+}

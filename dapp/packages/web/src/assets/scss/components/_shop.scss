@@ -1,0 +1,76 @@
+.shop {
+  position: relative;
+  &__content {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .go-back-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    left: 5%;
+    color: var(--color-white);
+    img {
+      display: inline-block;
+    }
+  }
+  &__title {
+    text-align: center;
+    @extend .fs-50px;
+    @extend .fw-900;
+    @extend .color-linear-yellow-orange;
+    margin-top: 1rem;
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem 0 5rem;
+  }
+
+  &__col {
+    width: 50%;
+    @include tablet {
+      width: 100%;
+    }
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  .shop__item {
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-sizing: border-box;
+    padding: 50px 80px 30px;
+    &.normal {
+      background-image: url('../../images/Box.png');
+    }
+    &.vip {
+      background-image: url('../../images/Box_vip.png');
+    }
+    &-title {
+      text-align: center;
+      @extend .fs-40px;
+      @extend .fw-800;
+      @extend .color-white;
+      margin: 1rem 0;
+    }
+    &-img {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    &-circle {
+      width: 74.67px;
+      height: 74.67px;
+      border-radius: 50%;
+      background-color: var(--color-red);
+      margin-right: 1rem;
+    }
+    &-price {
+      @extend .fs-40px;
+      @extend .fw-700;
+      @extend .color-aqua;
+    }
+  }
+}

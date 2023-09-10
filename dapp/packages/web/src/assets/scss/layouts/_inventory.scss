@@ -1,0 +1,114 @@
+.inventory {
+  display: flex;
+  align-items: flex-start;
+  padding: 2rem 0;
+  &__actions {
+    width: 398px;
+    &-item {
+      width: 352px;
+      height: 77px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+      background-image: url('../../images/filter.png');
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      mix-blend-mode: luminosity;
+      &.actived {
+        mix-blend-mode: unset;
+      }
+      span {
+        display: inline-block;
+        font-family: 'SVN-Batman Forever Alternate';
+        margin-left: 3rem;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        color: var(--color-white);
+      }
+    }
+  }
+  &__result {
+    width: calc(100% - 352px);
+  }
+
+  @media screen and (max-width: 1340px) {
+    &__items {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      column-gap: 20px;
+      row-gap: 20px;
+    }
+  }
+
+  @media screen and (max-width: 1140px) {
+    &__items {
+      display: grid;
+      grid-template-columns: auto auto;
+      column-gap: 20px;
+      row-gap: 20px;
+    }
+  }
+
+  @media screen and (max-width: 940px) {
+    display: block;
+
+    &__actions {
+      margin: 0 auto;
+    }
+
+    &__result {
+      width: 100%;
+      & > div:first-child {
+        padding-left: 1.5rem;
+      }
+    }
+
+    &__items {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      column-gap: 20px;
+      row-gap: 20px;
+      .item-mkp {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &__items {
+      display: grid;
+      grid-template-columns: auto auto;
+      column-gap: 20px;
+      row-gap: 20px;
+    }
+    &__empty {
+      width: 500px;
+      height: 387px;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    &__actions {
+      padding: 0 1.5rem;
+    }
+
+    &__result {
+      padding: 0 1rem;
+    }
+
+    &__items {
+      display: grid;
+      grid-template-columns: auto auto;
+      column-gap: 10px;
+      row-gap: 20px;
+    }
+
+    &__empty {
+      width: 290px;
+      height: 224px;
+    }
+  }
+}

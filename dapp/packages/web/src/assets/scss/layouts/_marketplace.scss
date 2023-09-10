@@ -1,0 +1,81 @@
+.marketplace {
+  width: 80%;
+  margin: 2rem auto;
+
+  &__top {
+    max-width: 720px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+
+    .title {
+      @extend .fs-34px;
+      @extend .fw-900;
+      @extend .color-linear-yellow-orange;
+    }
+
+    .content {
+      color: var(--color-white);
+      @extend .fs-20px;
+      @extend .fw-600;
+      @include mobile {
+        width: 80%;
+        margin: 1rem auto;
+      }
+    }
+
+    .buttons {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      position: relative;
+      z-index: 1;
+      .orange {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+
+    @include mobile {
+      display: block;
+    }
+    .box__col {
+      width: 50%;
+      @include small-tablet {
+        width: 100%;
+      }
+      @include mobile {
+        width: 100%;
+      }
+    }
+    .box {
+      width: 839px;
+      height: 594px;
+      box-sizing: border-box;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url(../../images/marketplace-box.png);
+      overflow: hidden;
+
+      &__content {
+        padding: 6% 12%;
+        transform: skewX(-5deg);
+        .box__title {
+          @extend .color-linear-yellow-orange;
+          @extend .fs-35px;
+          @extend .fw-900;
+        }
+        .item-wrap {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+}

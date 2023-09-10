@@ -1,0 +1,32 @@
+.login {
+  padding: 2rem 0;
+  height: calc(100vh - 110px);
+  &__wrapper {
+    position: relative;
+    width: 441px;
+    margin: 100px auto 0 auto;
+
+    @include mobile {
+      max-width: 90%;
+      margin: 1rem auto;
+    }
+  }
+  .fs-saria-22px {
+    color: var(--color-electric-violet);
+  }
+  .button-wrapper {
+    position: relative;
+    z-index: 1;
+  }
+  .go-back-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: -50%;
+    color: var(--color-white);
+    z-index: 1;
+    img {
+      display: inline-block;
+    }
+  }
+}

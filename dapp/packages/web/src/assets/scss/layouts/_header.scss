@@ -1,0 +1,188 @@
+.ultimate_player-header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  .ultimate_player-header__menu {
+    display: flex;
+    align-items: center;
+    &-mobile {
+      display: none;
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      margin-top: -100vh;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      .ultimate_player-header__content {
+        flex-direction: column;
+        justify-content: space-between;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        list-style: none;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        .ultimate_player-header__item {
+          font-family: 'SVN-Batman Forever Alternate';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 17px;
+          color: var(--color-white);
+          margin-bottom: 2rem;
+          cursor: pointer;
+          transition: all 0.2s;
+          &.actived {
+            color: var(--color-blue-menu-nav);
+          }
+          &:hover {
+            color: var(--color-blue-menu-nav);
+          }
+        }
+      }
+      background-color: rgba(0, 0, 0, 0.7);
+      transition: all 0.2s;
+      &.show {
+        margin-top: 0;
+      }
+    }
+    .ultimate_player-header__content {
+      display: flex;
+      list-style: none;
+      align-items: center;
+    }
+    .ultimate_player-header__item {
+      font-family: 'SVN-Batman Forever Alternate';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      color: var(--color-white);
+      margin-right: 2rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      &.actived {
+        color: var(--color-blue-menu-nav);
+      }
+      &:hover {
+        color: var(--color-blue-menu-nav);
+      }
+    }
+
+    .button-wallet__mobile {
+      display: none;
+      margin-right: 1rem;
+    }
+    .button-toggle {
+      margin-left: auto;
+      display: none;
+      cursor: pointer;
+      position: relative;
+      z-index: 10000;
+      & > div {
+        width: 20px;
+        height: 2px;
+        background-color: white;
+        margin: 6px 0;
+      }
+    }
+  }
+
+  &__popup {
+    position: absolute;
+    top: 65px;
+    right: 0px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url('../../images/account-popup.png');
+    // border: 1px solid #ff75ff;
+    padding: 1rem 1rem 0 1rem;
+    width: 207px;
+    height: 202px;
+    display: none;
+    z-index: 100;
+    &.show {
+      display: block;
+    }
+    p {
+      font-family: 'Roboto Mono';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 140%;
+      color: var(--color-white);
+    }
+    &-address {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      span {
+        font-family: 'Roboto Mono';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 140%;
+        color: var(--color-white);
+      }
+    }
+    &-balance {
+      font-family: 'SVN-Batman Forever Alternate';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: var(--color-supernova);
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      hyphens: auto;
+      margin: 1rem 0;
+    }
+    &-actions {
+      margin: 0.5rem 0;
+      &-item {
+        display: flex;
+        margin-bottom: 1rem;
+        align-items: center;
+        p {
+          font-family: 'Roboto Mono';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 140%;
+          color: var(--color-white);
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1250px) {
+    padding: 0.5rem;
+    justify-content: space-between;
+    .ultimate_player-header__menu {
+      &-mobile {
+        display: block;
+      }
+      .ultimate_player-header__content {
+        display: none;
+      }
+      .button-toggle {
+        display: inline-block;
+      }
+      .button-wallet__mobile {
+        display: inline-block;
+      }
+    }
+
+    &__popup {
+      right: 40px;
+    }
+  }
+}
+.line {
+  width: 100%;
+  height: 3px;
+  background: radial-gradient(50% 50% at 50% 50%, #00d9f8 0%, rgba(0, 217, 248, 0) 100%);
+}

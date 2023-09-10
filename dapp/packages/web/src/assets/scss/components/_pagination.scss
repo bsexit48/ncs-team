@@ -1,0 +1,32 @@
+.ultimate_player-pagination {
+  margin-top: 1rem;
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    li {
+      margin: 0 1rem;
+      cursor: pointer;
+      @include mobile {
+        margin: 0 0.5rem;
+      }
+      &.page-item {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 25px;
+        line-height: 33px;
+        color: #c4c4c4;
+        &.active {
+          color: var(--color-aqua);
+        }
+        @include mobile {
+          font-size: 14px;
+          line-height: 20px;
+          svg {
+            width: 5px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+version: 1.0.0
+applications:
+  - appRoot: packages/web
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - nvm use $VERSION_NODE_16
+            - yarn workspaces focus
+        build:
+          commands:
+            - yarn run build:web:$BUILD_ENV
+        postBuild:
+            commands:
+            - yarn run notify:web:$BUILD_ENV
+      cache:
+        paths:
+          - .next
+          - out
+      artifacts:
+        baseDirectory: out
+        files:
+          - '**/*'
+      customHeaders:
+        # cache static assets! (can I just use a glob for this, e.g., '**/*.{js,css,gif,ico,jpg,png,svg,mp4,webm}' ?)
+        # js
+        - pattern: '**/*.js'
+          headers: [ { key: 'Cache-Control', value: 'public,max-age=31536000,immutable' } ]
+        # css
+        - pattern: '**/*.css'
+          headers: [ { key: 'Cache-Control', value: 'public,max-age=31536000,immutable' } ]
+        # images
+        - pattern: '**/*.gif'
+          headers: [ { key: 'Cache-Control', value: 'public,max-age=31536000,immutable' } ]
+        - pattern: '**/*.ico'
+          headers: [ { key: 'Cache-Control', value: 'public,max-age=31536000,immutable' } ]
+        - pattern: '**/*.jpg'
+          headers: [ { key: 'Cache-Control', value: 'public,max-age=31536000,immutable' } ]
+        - pattern: '**/*.png'
+          headers: [ { key: 'Cache-Control', value: 'public,max-age=31536000,immutable' } ]
+        - pattern: '**/*.svg'
+          headers: [ { key: 'Cache-Control', value: 'public,max-age=31536000,immutable' } ]
+        # videos
+        - pattern: '**/*.mp4'
+          headers: [ { key: 'Cache-Control', value: 'public,max-age=31536000,immutable' } ]
+        - pattern: '**/*.webm'
+          headers: [ { key: 'Cache-Control', value: 'public,max-age=31536000,immutable' } ]

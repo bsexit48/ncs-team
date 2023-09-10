@@ -1,0 +1,138 @@
+/*
+Generic Styling, for Desktops/Laptops
+*/
+table.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  /* Zebra striping */
+  thead {
+    background: url('../../images/table-header-background.png');
+    th {
+      color: var(--color-white);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      text-align: left;
+      padding: 0 20px;
+      @include mobile {
+        font-size: 10px;
+        line-height: 13px;
+      }
+    }
+  }
+  tbody {
+    tr:nth-of-type(odd) {
+      background: var(--color-even-row-table);
+    }
+    tr:nth-of-type(even) {
+      background: var(--color-even-row-table);
+    }
+    td {
+      height: 73px;
+      padding: 0 20px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      color: var(--color-white);
+      @include mobile {
+        height: 37px;
+        padding: 0 10px;
+        font-size: 10px;
+        line-height: 13px;
+      }
+      &.green {
+        color: var(--color-green-status);
+      }
+      &.yellow {
+        color: var(--color-yellow-status);
+      }
+      &.red {
+        color: var(--color-red-status);
+      }
+      &:nth-child(4) {
+        @extend .text-batman;
+      }
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    table {
+      border: 0;
+    }
+
+    table caption {
+      font-size: 1.3em;
+    }
+
+    table thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+
+    table tr {
+      border-bottom: 3px solid #ddd;
+      display: block;
+      margin-bottom: 0.625em;
+    }
+
+    table td {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      font-size: 0.8em;
+      text-align: right;
+    }
+
+    table td::before {
+      /*
+      * aria-label has no advantage, it won't be read inside a table
+      content: attr(aria-label);
+      */
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    table td:last-child {
+      border-bottom: 0;
+    }
+  }
+}
+
+.table-filter {
+  cursor: pointer;
+  margin-left: 0.5rem;
+  display: inline-block;
+  position: relative;
+  &__dropdown {
+    position: absolute;
+    top: 30px;
+    left: -80px;
+    width: 150px;
+    transition: all 0.3s;
+    background: var(--color-bg-menu);
+    border-radius: 4px;
+    overflow: hidden;
+    &.show {
+      height: calc(36px * 4);
+    }
+    &.hide {
+      height: 0;
+    }
+    .dropdown-item {
+      -webkit-text-fill-color: var(--color-white);
+      text-align: right;
+      padding: 0.3rem;
+      font-size: 1rem;
+      &:hover {
+        -webkit-text-fill-color: var(--color-aqua);
+      }
+    }
+  }
+}

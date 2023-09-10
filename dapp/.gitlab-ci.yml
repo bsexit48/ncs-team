@@ -1,0 +1,42 @@
+variables:
+  DOCKER_DRIVER: overlay2
+image: node:14
+
+stages:
+  # - init
+  - deploy
+
+cache: &global_cache
+  key:
+    files:
+      - yarn.lock
+  paths:
+    - node_modules
+  policy: pull
+
+deploy_api_staging:
+  stage: deploy
+  script:
+    - apt-get update -y
+    - apt-get --yes --force-yes install rsync
+    - eval $(ssh-agent -s)
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+    - ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
+    - ssh-keyscan -t rsa $MARKET_API_STAGING_DOMAIN >> ~/.ssh/known_hosts
+    - chmod 600 ~/.ssh/known_hosts
+    - npm install -g replace-in-files-cli
+    - replace-in-files --string='packages/*' --replacement='packages/xxx' ./package.json
+    - YARN_ENABLE_IMMUTABLE_INSTALLS=false yarn install
+    - yarn deploy:api:staging
+  only:
+    refs:
+      - staging
+    changes:
+      - packages/api/src/**/*
+      - packages/api/package.json
+  cache:
+    <<: *global_cache
+    policy: pull-push
+  interruptible: true

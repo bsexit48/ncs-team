@@ -1,0 +1,72 @@
+.item-in-the-box {
+  display: inline-block;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+  .view-info,
+  .trade-info {
+    @extend .fs-30px;
+    @extend .fw-600;
+  }
+  .gun-background {
+    width: 103px;
+    height: 90px;
+    background-size: 100% 100%;
+    background-position: center center;
+    background-image: url('../../svgs/item_slot_1.svg');
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+    &-fill {
+      width: calc(100% - 18px);
+      height: calc(100% - 18px);
+      background-size: 100% 100%;
+      padding: 2px;
+      &.gray {
+        background-image: url('../../images/BG-Rarity/gray.png');
+      }
+      &.green {
+        background-image: url('../../images/BG-Rarity/green.png');
+      }
+      &.purple {
+        background-image: url('../../images/BG-Rarity/purple.png');
+      }
+      &.purple-blue {
+        background-image: url('../../images/BG-Rarity/purple-blue.png');
+      }
+    }
+  }
+  .gun-status {
+    &.success {
+      color: var(--color-green);
+    }
+    &.fail {
+      color: var(--color-red);
+    }
+  }
+  .gun-token-amount,
+  .gun-rarity {
+    color: var(--color-yellow-orange);
+  }
+  .gun-name {
+    color: var(--color-white);
+  }
+  .gun-level {
+    color: var(--color-aqua);
+  }
+  &--gray .gun-rarity-value {
+    color: var(--color-gray);
+  }
+  &--purple .gun-rarity-value {
+    color: var(--color-electric-violet);
+  }
+  &--purple-blue .gun-rarity-value {
+    color: var(--color-light-blue);
+  }
+  &--green .gun-rarity-value {
+    color: var(--color-green);
+  }
+}

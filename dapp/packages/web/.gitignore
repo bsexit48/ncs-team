@@ -1,0 +1,21 @@
+node_modules/
+.next/
+.DS_STORE
+.env
+
+# Sentry
+.sentryclirc
+
+# Next
+out/
+
+# yarn
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+
+# Typescript
+tsconfig.tsbuildinfo
+.DS_Store

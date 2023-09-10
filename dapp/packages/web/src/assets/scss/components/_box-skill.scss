@@ -1,0 +1,73 @@
+.box-skill {
+  max-width: 642px;
+  height: 120px;
+  width: 100%;
+  color: var(--color-white);
+  border-radius: 2px;
+  /* transform: skew(-5deg); */
+  position: relative;
+  margin: 1rem auto;
+}
+.box-skill__content-overlay {
+  border: 3px solid var(--color-aqua);
+  background-color: var(--color-blue-blur-500);
+  filter: blur(4px);
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  transform: matrix(1, 0, -0.07, 1, 0, 0);
+}
+.box-skill__content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.box-skill .box-skill__image {
+  /* transform: skew(5deg); */
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  background-color: #c4c4c4;
+  margin-right: 20px;
+}
+.box-skill .box-skill__content {
+  /* transform: skew(5deg); */
+  width: 476px;
+}
+
+.box-skill .box-skill__content .content__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box-skill .box-skill__content .content__header .content__header-left {
+  font-family: Red Hat Display;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 40px;
+  color: var(--color-white);
+}
+
+.box-skill .box-skill__content .content__header .content__header-right {
+  width: 41px;
+  height: 41px;
+  border-radius: 50%;
+  background-color: #9f8e85;
+}
+
+.box-skill .box-skill__content .content__description {
+  font-family: Red Hat Display;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 26px;
+  color: var(--color-white);
+}

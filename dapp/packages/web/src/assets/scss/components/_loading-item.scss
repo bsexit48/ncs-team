@@ -1,0 +1,28 @@
+.loading-item {
+  background-color: rgb(48, 51, 57);
+  width: 200px;
+  height: 264px;
+  border-radius: 4px;
+  &__image {
+    text-align: center;
+    margin: 1rem 0;
+  }
+  &__price {
+    text-align: center;
+    margin: 1rem 0;
+  }
+  &__line {
+    height: 2px;
+    width: 100%;
+    background-color: rgb(77, 82, 93);
+  }
+  &__stars {
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 164px;
+    height: 226px;
+  }
+}

@@ -1,0 +1,188 @@
+.item-mkp {
+  width: 200px;
+  height: 264px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  &__content {
+    margin-top: 5px;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+
+    .content-detail__information {
+      position: absolute;
+      bottom: 60px;
+      left: 50%;
+      width: 140px;
+      text-align: center;
+      transform: translateX(-50%);
+      @extend .text-batman;
+      font-style: normal;
+      font-weight: bold;
+      color: var(--color-white);
+      span {
+        display: block;
+        font-size: 12px;
+        margin-bottom: 8px;
+      }
+    }
+    .content-detail__price {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      @extend .text-batman;
+      font-style: normal;
+      font-weight: bold;
+      color: var(--color-white);
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+
+      span {
+        display: block;
+        font-size: 14px;
+        margin-right: 5px;
+      }
+    }
+    .content-detail__image {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      img {
+        width: 120px;
+        margin: 10px auto;
+      }
+
+      &.gun_img {
+        top: 40px;
+      }
+    }
+    .content-detail__rare {
+      width: 100px;
+      height: 100px;
+      margin: 10px 10px 10px 15px;
+      &.common {
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        background-image: url('../../images/bg_mk/card_C.png');
+      }
+      &.uncommon {
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        background-image: url('../../images/bg_mk/card_U.png');
+      }
+      &.rare {
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        background-image: url('../../images/bg_mk/card_R.png');
+
+      }
+      &.epic {
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        background-image: url('../../images/bg_mk/card_E.png');
+      }
+      &.unique {
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        background-image: url('../../images/bg_mk/card_Unique.png');
+      }
+      &.legend {
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        background-image: url('../../images/bg_mk/card_L.png');
+      }
+    }
+  }
+  &.blue {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-image: url('../../svgs/item_bg_blue.svg');
+  }
+  &.purple {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-image: url('../../svgs/item_bg_purple.svg');
+  }
+  &.inventory {
+    padding: 0;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 164px;
+    height: 226px;
+    &__content {
+      .content-detail__image {
+        img {
+          width: 80px;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  // border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  
+  text-align: center;
+  padding: 5px 0;
+  padding-left: 10px;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+
+
+  &.common {
+    background-color: rgba(0, 0, 0, 0.644);
+    color: #a1abaf;
+  }
+  &.uncommon {
+    background-color: rgba(0, 0, 0, 0.644);
+    color: #2eb9fa;
+  }
+  &.rare {
+    background-color: rgba(0, 0, 0, 0.644);
+    color: #cf4ffe;
+
+  }
+  &.epic {
+    background-color: rgba(0, 0, 0, 0.644);
+    color: #f5cb23;
+  }
+  &.unique {
+    background-color: rgba(0, 0, 0, 0.644);
+    color: #f5009c;
+  }
+  &.legend {
+    background-color: rgba(0, 0, 0, 0.644);
+    color: #ff0000;
+  }
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}

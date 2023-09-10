@@ -1,0 +1,50 @@
+.mystery-box {
+  width: 200px;
+  height: 264px;
+  margin-bottom: 30px;
+  position: relative;
+  cursor: pointer;
+  &.blue {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-image: url('../../svgs/item_bg_blue.svg');
+  }
+  &.purple {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-image: url('../../svgs/item_bg_purple.svg');
+  }
+  &__image {
+    text-align: center;
+    margin: 3rem auto;
+  }
+  &__content {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    left: 70%;
+    transform: translateX(-50%);
+    font-family: 'SVN-Batman Forever Alternate';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: var(--color-white);
+    text-shadow: 0px 4px 4px #000000;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 164px;
+    height: 226px;
+    // &__content {
+    //   .content-detail__image {
+    //     img {
+    //       width: 80px;
+    //       margin-top: 20px;
+    //     }
+    //   }
+    // }
+  }
+}

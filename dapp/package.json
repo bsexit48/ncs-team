@@ -1,0 +1,48 @@
+{
+  "name": "ultimate_player-marketplace",
+  "private": true,
+  "version": "1.0.0",
+  "license": "MIT",
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "start:api": "lerna run --scope ultimate_player-marketplace-api --stream start",
+    "build:api": "cd packages/api && yarn build",
+    "heroku-prebuild": "rm -rf packages/{web,app}",
+    "heroku-cleanup": "cd packages/api && yarn generate",
+    "build": "yarn build:api",
+    "typecheck": "lerna run typecheck",
+    "lint:fix": "lerna run lint:fix",
+    "ci": "yarn typecheck && yarn lint:fix",
+    "build:web:staging": "yarn workspace ultimate_player-marketplace-web run build:staging",
+    "deploy:api:staging": "npx shipit staging deploy --shipitfile packages/api/shipitfile.js",
+    "notify:web:staging": "yarn workspace ultimate_player-marketplace-web run notify:staging",
+    "postinstall": "npx husky install && yarn workspaces foreach run postinstall"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
+    "@slack/webhook": "^6.1.0",
+    "@typescript-eslint/eslint-plugin": "^5.17.0",
+    "@typescript-eslint/parser": "^5.17.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.12.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-flowtype": "^8.0.3",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "husky": "^7.0.4",
+    "lerna": "^4.0.0",
+    "lint-staged": "^12.3.7",
+    "prettier": "^2.6.1",
+    "rimraf": "^3.0.2",
+    "shipit-cli": "^5.3.0",
+    "shipit-deploy": "^5.3.0",
+    "typescript": "^4.6.3"
+  },
+  "packageManager": "yarn@3.2.0"
+}

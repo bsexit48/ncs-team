@@ -1,0 +1,156 @@
+// Red Hat Display
+@font-face {
+  font-family: "SVN-Batman Forever Alternate";
+  src: url(../../fonts/Batman_Forever/SVN-BatmanForeverAlternate.eot);
+  src: url(../../fonts/Batman_Forever/SVN-BatmanForeverAlternate.eot?#iefix) format("embedded-opentype"),
+    url(../../fonts/Batman_Forever/SVN-BatmanForeverAlternate.woff2) format("woff2"),
+    url(../../fonts/Batman_Forever/SVN-BatmanForeverAlternate.woff) format("woff"),
+    url(../../fonts/Batman_Forever/SVN-BatmanForeverAlternate.ttf) format("truetype"),
+    url(../../fonts/Batman_Forever/SVN-BatmanForeverAlternate.svg#SVN-BatmanForeverAlternate) format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.text-Red-Hat-Display {
+  font-family: "SVN-Batman Forever Alternate", sans-serif;
+}
+
+.text-batman {
+  font-family: "SVN-Batman Forever Alternate", sans-serif;
+}
+
+.text-Saira-Condensed {
+  font-family: "Roboto Mono", monospace;
+}
+
+@for $i from 5 through 9 {
+  .fw-#{$i}00 {
+    font-weight: #{$i}00;
+  }
+}
+.fs-13px {
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.fs-13px {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.fs-15px {
+  font-size: 15px;
+  line-height: 24px;
+}
+.fs-16px {
+  font-size: 16px;
+  line-height: 21px;
+}
+.fs-20px {
+  font-size: 20px;
+  line-height: 26px;
+  @include mobile {
+    font-size: 16px;
+    line-height: 21px;
+  }
+}
+.fs-21px {
+  font-size: 21px;
+  line-height: 28px;
+}
+.fs-saria-22px {
+  @extend .text-Saira-Condensed;
+  font-size: 22px;
+  line-height: 35px;
+}
+.fs-red-hat-22px {
+  @extend .text-Red-Hat-Display;
+  font-size: 22px;
+  line-height: 29px;
+}
+.fs-23px {
+  font-size: 23px;
+  line-height: 30px;
+}
+.fs-24px {
+  font-size: 24px;
+  line-height: 36px;
+}
+.fs-25px {
+  font-size: 25px;
+  line-height: 33px;
+}
+
+.fs-28px {
+  font-size: 28px;
+  line-height: 37px;
+}
+
+.fs-30px {
+  font-size: 30px;
+  line-height: 40px;
+  @include mobile {
+    font-size: 22px;
+    line-height: 29px;
+  }
+}
+
+.fs-34px {
+  font-size: 34px;
+  line-height: 40px;
+
+  @include mobile {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+.fs-35px {
+  font-size: 35px;
+  line-height: 46px;
+}
+
+.fs-40px {
+  font-size: 40px;
+  line-height: 53px;
+
+  @include mobile {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+.fs-50px {
+  font-size: 50px;
+  line-height: 66px;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
+}
+
+// COLOR-TEXT
+.color-white {
+  color: var(--color-white);
+}
+.color-gray {
+  color: var(--color-gray);
+}
+.color-silver {
+  color: var(--color-silver);
+}
+.color-aqua {
+  color: var(--color-aqua);
+}
+.color-linear-yellow-orange {
+  background: var(--color-linear-yellow-orange);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

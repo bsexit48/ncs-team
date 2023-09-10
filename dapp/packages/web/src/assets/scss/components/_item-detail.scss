@@ -1,0 +1,129 @@
+.item-nft {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__price {
+    color: #fff;
+    @extend .text-batman;
+    @extend .fs-28px;
+  }
+
+  &__image-wrap {
+    width: 476px;
+    height: 546px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    background-image: url('../../svgs/item-detail-bg-purple.svg');
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    margin: 0 auto;
+
+    img {
+      width: 334px;
+      height: auto;
+    }
+  }
+
+  &__col {
+    width: 50%;
+    @include small-tablet {
+      width: 100%;
+    }
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  &__purchase {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__price-box {
+    width: 100%;
+  }
+
+  .item-level {
+    background-image: url('../../images/gun-level.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 46px;
+    height: 40px;
+    text-align: center;
+    span {
+      font-family: 'Roboto Mono', monospace;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 40px;
+      background: linear-gradient(180deg, #ffd903 0%, #eaaa1f 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+  }
+
+  &__input {
+    display: flex;
+    align-items: center;
+    max-width: 444px;
+    width: 100%;
+    margin: 1rem auto;
+    span {
+      display: inline-block;
+      font-family: 'SVN-Batman Forever Alternate';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      color: var(--color-white);
+      margin-right: 0.5rem;
+    }
+  }
+
+  &__button {
+    text-align: center;
+  }
+
+  @media screen and (max-width: 1050px) {
+    display: block;
+    .item-nft__col {
+      margin: 2rem auto;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    .item-nft__content {
+      padding: 0 1rem;
+    }
+
+    &__input {
+      max-width: 280px;
+    }
+    .item-info {
+      width: 240px;
+      span {
+        font-size: 14px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .item-nft__image-wrap {
+      width: 300px;
+      height: 344px;
+      .item-nft__image {
+        margin-top: 2rem;
+        img {
+          width: 80%;
+        }
+      }
+    }
+  }
+}

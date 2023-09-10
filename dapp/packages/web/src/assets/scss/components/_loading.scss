@@ -1,0 +1,12 @@
+.loading {
+  &.large {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &.small {
+    display: inline-block;
+    margin-right: 1rem;
+  }
+}

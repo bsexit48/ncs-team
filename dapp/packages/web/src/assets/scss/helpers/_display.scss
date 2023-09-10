@@ -1,0 +1,46 @@
+.justify-between {
+  justify-content: space-between;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.align-items-center {
+  align-items: center;
+}
+
+.d-flex {
+  display: flex !important;
+}
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.d-none {
+  display: none !important;
+}
+.d-block {
+  display: block !important;
+}
+.d-inline-block {
+  display: inline-block !important;
+}
+
+.d-sm-block {
+  display: none;
+  @media screen and (min-width: $mobile-width) {
+    display: block;
+  }
+}
+
+.d-sm-none {
+  display: block;
+  @media screen and (min-width: $mobile-width) {
+    display: none;
+  }
+}

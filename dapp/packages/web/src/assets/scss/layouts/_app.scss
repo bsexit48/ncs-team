@@ -1,0 +1,61 @@
+.app {
+  width: 100%;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #000103;
+  background-image: url('../../images/bg.png');
+  &-content {
+    margin: 0 auto;
+  }
+
+  .children-content {
+    min-height: calc(100vh - 70px - 87.5px);
+  }
+
+  &.hasPopup {
+    height: 100vh;
+    overflow: hidden;
+  }
+  &-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    &.open {
+      display: block;
+    }
+    &.hide {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 576px) {
+    &-content {
+      max-width: 540px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    &-content {
+      max-width: 720px;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    &-content {
+      max-width: 960px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &-content {
+      max-width: 1140px;
+    }
+  }
+  @media screen and (min-width: 1440px) {
+    &-content {
+      max-width: 1320px;
+    }
+  }
+}

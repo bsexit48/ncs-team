@@ -1,0 +1,280 @@
+.custom-new-button {
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+
+  &.default {
+    width: 200px;
+    height: 54px;
+
+    &.blue {
+      background-image: url("../../images/buttons/default_blue_button.png");
+      &.actived {
+        background-image: url("../../images/buttons/default_orange_button.png");
+        &:hover {
+          background-image: url("../../images/buttons/default_orange_button.png");
+        }
+      }
+      &:hover {
+        background-image: url("../../images/buttons/default_orange_button.png");
+      }
+    }
+
+    &.orange {
+      background-image: url("../../images/buttons/default_orange_button.png");
+      &.actived {
+        background-image: url("../../images/buttons/default_blue_button.png");
+        &:hover {
+          background-image: url("../../images/buttons/default_blue_button.png");
+        }
+      }
+      &:hover {
+        background-image: url("../../images/buttons/default_blue_button.png");
+      }
+    }
+    span {
+      @extend .fw-900;
+      @extend .fs-21px;
+      line-height: 28px;
+    }
+  }
+  &.square-left-small {
+    width: 212px;
+    height: 54px;
+    &.blue {
+      background-image: url("../../images/buttons/square_left_small_blue_button.png");
+      &.actived {
+        background-image: url("../../images/buttons/square_left_small_orange_button.png");
+        &:hover {
+          background-image: url("../../images/buttons/square_left_small_orange_button.png");
+        }
+      }
+      &:hover {
+        background-image: url("../../images/buttons/square_left_small_orange_button.png");
+      }
+    }
+    &.orange {
+      background-image: url("../../images/buttons/square_left_small_orange_button.png");
+      &.actived {
+        background-image: url("../../images/buttons/square_left_small_blue_button.png");
+        &:hover {
+          background-image: url("../../images/buttons/square_left_small_blue_button.png");
+        }
+      }
+      &:hover {
+        background-image: url("../../images/buttons/square_left_small_blue_button.png");
+      }
+    }
+    span {
+      @extend .fw-900;
+      @extend .fs-21px;
+      line-height: 28px;
+    }
+  }
+  &.square-left {
+    width: 224.64px;
+    height: 60px;
+    &.blue {
+      background-image: url("../../images/buttons/square_left_blue_button.png");
+      &.actived {
+        background-image: url("../../images/buttons/square_left_orange_button.png");
+        &:hover {
+          background-image: url("../../images/buttons/square_left_orange_button.png");
+        }
+      }
+      &:hover {
+        background-image: url("../../images/buttons/square_left_orange_button.png");
+      }
+    }
+    &.orange {
+      background-image: url("../../images/buttons/square_left_orange_button.png");
+      &.actived {
+        background-image: url("../../images/buttons/square_left_blue_button.png");
+        &:hover {
+          background-image: url("../../images/buttons/square_left_blue_button.png");
+        }
+      }
+      &:hover {
+        background-image: url("../../images/buttons/square_left_blue_button.png");
+      }
+    }
+    span {
+      @extend .fw-900;
+      @extend .fs-25px;
+      line-height: 33px;
+    }
+  }
+  &.square-right {
+    width: 224.64px;
+    height: 60px;
+    &.blue {
+      background-image: url("../../images/buttons/square_right_blue_button.png");
+      &.actived {
+        background-image: url("../../images/buttons/square_right_orange_button.png");
+        &:hover {
+          background-image: url("../../images/buttons/square_right_orange_button.png");
+        }
+      }
+      &:hover {
+        background-image: url("../../images/buttons/square_right_orange_button.png");
+      }
+    }
+    &.orange {
+      background-image: url("../../images/buttons/square_right_orange_button.png");
+      &.actived {
+        background-image: url("../../images/buttons/square_right_blue_button.png");
+        &:hover {
+          background-image: url("../../images/buttons/square_right_blue_button.png");
+        }
+      }
+      &:hover {
+        background-image: url("../../images/buttons/square_right_blue_button.png");
+      }
+    }
+    span {
+      @extend .fw-900;
+      @extend .fs-25px;
+      line-height: 33px;
+    }
+  }
+  &.trapezoid {
+    width: 373px;
+    height: 79.5px;
+    &.blue {
+      background-image: url("../../images/buttons/trapezoid_blue_button.png");
+      &.actived {
+        background-image: url("../../images/buttons/trapezoid_orange_button.png");
+        &:hover {
+          background-image: url("../../images/buttons/trapezoid_orange_button.png");
+        }
+      }
+      &:hover {
+        background-image: url("../../images/buttons/trapezoid_orange_button.png");
+      }
+    }
+    &.orange {
+      background-image: url("../../images/buttons/trapezoid_orange_button.png");
+      &.actived {
+        background-image: url("../../images/buttons/trapezoid_blue_button.png");
+        &:hover {
+          background-image: url("../../images/buttons/trapezoid_blue_button.png");
+        }
+      }
+      &:hover {
+        background-image: url("../../images/buttons/trapezoid_blue_button.png");
+      }
+    }
+    span {
+      @extend .fw-700;
+      @extend .fs-40px;
+      line-height: 53px;
+    }
+  }
+  &.parallel {
+    width: 177px;
+    height: 52px;
+
+    &.long {
+      width: 220px;
+    }
+
+    &.blue {
+      background-image: url("../../images/buttons/parallel_blue_button.png");
+      &.actived {
+        background-image: url("../../images/buttons/parallel_orange_button.png");
+        &:hover {
+          background-image: url("../../images/buttons/parallel_orange_button.png");
+        }
+      }
+      &:hover {
+        background-image: url("../../images/buttons/parallel_orange_button.png");
+      }
+    }
+    &.orange {
+      background-image: url("../../images/buttons/parallel_orange_button.png");
+      &.actived {
+        background-image: url("../../images/buttons/parallel_blue_button.png");
+        &:hover {
+          background-image: url("../../images/buttons/parallel_blue_button.png");
+        }
+      }
+      &:hover {
+        background-image: url("../../images/buttons/parallel_blue_button.png");
+      }
+    }
+    span {
+      @extend .fw-700;
+      @extend .fs-21px;
+      line-height: 30px;
+      text-transform: uppercase;
+    }
+  }
+  &.default-icon {
+    width: 423px;
+    height: 87px;
+    &.blue {
+      background-image: url("../../images/buttons/default_icon_blue_button.png");
+      @include mobile {
+        background-image: url("../../images/buttons/default_icon_blue_button.svg");
+        width: 100%;
+        height: 70px;
+        background-size: contain;
+
+        .mr-1 {
+          margin-left: -2rem;
+        }
+        span {
+          font-size: 16px;
+        }
+      }
+
+      &.actived {
+        background-image: url("../../images/buttons/default_icon_orange_button.png");
+        &:hover {
+          background-image: url("../../images/buttons/default_icon_orange_button.png");
+        }
+      }
+      &:hover {
+        background-image: url("../../images/buttons/default_icon_orange_button.png");
+      }
+    }
+    &.orange {
+      background-image: url("../../images/buttons/default_icon_orange_button.png");
+      &:hover {
+        background-image: url("../../images/buttons/default_icon_blue_button.png");
+      }
+    }
+    span {
+      @extend .fw-600;
+      @extend .fs-25px;
+      line-height: 33px;
+    }
+  }
+  &.texted {
+    @extend .fw-600;
+    @extend .fs-30px;
+    line-height: 40px;
+  }
+
+  &.purple {
+    background-image: url("../../images/buttons/purple_button.svg");
+    width: 280px;
+  }
+
+  &.rect {
+    background-image: url("../../images/buttons/button-buy.svg");
+    width: 446px;
+    height: 86px;
+    background-size: contain;
+    @extend .text-batman;
+    font-size: 24px;
+
+    span {
+      margin-bottom: 10px;
+    }
+  }
+}

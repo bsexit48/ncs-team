@@ -1,0 +1,145 @@
+.marketplace-list {
+  width: 95%;
+  // margin: 2rem auto;
+  min-height: calc(100vh - 110px - 380px);
+  max-width: $max-content-width;
+
+  @include mobile {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  &__content {
+    display: flex;
+    margin: 2rem 0;
+    min-height: 300px;
+
+    &--sell {
+      flex-wrap: wrap;
+    }
+
+    @include tablet {
+      flex-flow: row wrap;
+    }
+
+    @include small-tablet {
+      flex-flow: row wrap;
+    }
+
+    @include mobile {
+      flex-flow: row wrap;
+    }
+
+    &__tabs {
+      display: flex;
+      justify-content: center;
+      .marketplace-list__buttons {
+        max-width: 571px;
+
+        @include mobile {
+          padding-top: 1rem;
+        }
+
+        .buttons {
+          display: flex;
+          justify-content: center;
+          gap: 20px;
+        }
+      }
+    }
+
+    .buttons {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      & > div {
+        margin-right: 20px;
+      }
+    }
+
+    .listing-heading {
+      display: flex;
+      width: 100%;
+      margin: 1rem auto;
+
+      @include mobile {
+        display: block;
+        width: 100%;
+
+        h2 {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
+    &__item_list {
+      width: 100%;
+      display: grid; /* 1 */
+      grid-template-columns: repeat(auto-fill, minmax(auto, 250px));
+      grid-gap: 1rem; /* 3 */
+      justify-content: space-between; /* 4 */
+
+      @include mobile {
+        grid-template-columns: repeat(auto-fill, minmax(auto, 160px));
+        grid-gap: 1rem; /* 3 */
+      }
+    }
+
+    &-detail {
+      // width: calc(100% - 351px);
+
+      @include tablet {
+        width: 100%;
+      }
+
+      @include mobile {
+        width: 100%;
+      }
+
+      // This for the buy parts
+      &__item_list {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+    }
+  }
+
+  &__content-detail {
+    width: 100%;
+  }
+
+  .filter-wrapper {
+    @include tablet {
+      width: 100%;
+    }
+
+    @include small-tablet {
+      width: 100%;
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+
+    .filter {
+      @include tablet {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+
+      @include small-tablet {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+
+      @include mobile {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

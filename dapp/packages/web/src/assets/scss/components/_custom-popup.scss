@@ -1,0 +1,154 @@
+.pop-up {
+  &__wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url('../../images/popup.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 423px;
+    height: 413px;
+    padding: 1rem 2rem;
+    z-index: 100;
+  }
+  &__close {
+    text-align: right;
+    img {
+      cursor: pointer;
+    }
+  }
+  &__title {
+    font-family: 'SVN-Batman Forever Alternate';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: var(--color-white);
+  }
+  &__content {
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    text-align: justify;
+    color: var(--color-white);
+    min-height: 90px;
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-wrapper {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      p {
+        font-family: 'Roboto Mono';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 140%;
+        color: var(--color-white);
+        margin: 0.5rem 0;
+        &.success-id {
+          font-family: 'Roboto Mono';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 140%;
+          color: var(--color-blue-menu-nav);
+        }
+      }
+    }
+  }
+  &__overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 88;
+    display: none;
+    &.open {
+      display: block;
+    }
+  }
+
+  .video-unbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: black;
+    z-index: 101;
+    &.open {
+      display: block;
+    }
+  }
+
+  .item-unbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #000103;
+    background-image: url('../../images/bg.png');
+    z-index: 101;
+    &__content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url('../../images/bg-inner.png');
+      width: 903px;
+      height: 735px;
+      &__image-wrap {
+        width: 476px;
+        height: 546px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        background-image: url('../../svgs/item-detail-bg-purple.svg');
+
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        margin: 0 auto;
+
+        img {
+          width: 334px;
+          height: auto;
+        }
+      }
+    }
+    &.open {
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &__wrapper {
+      width: 350px;
+      height: 342px;
+    }
+
+    &__content {
+      margin: 1rem 0;
+    }
+  }
+}

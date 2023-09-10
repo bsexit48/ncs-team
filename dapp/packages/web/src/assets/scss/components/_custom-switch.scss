@@ -1,0 +1,12 @@
+.switch-item {
+  &__title {
+    text-align: center;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 19px;
+    background: var(--color-linear-yellow-orange);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.2rem;
+  }
+}

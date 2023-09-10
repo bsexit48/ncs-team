@@ -1,0 +1,46 @@
+.footer {
+  &__content {
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .footer__detail {
+      font-family: 'SVN-Batman Forever Alternate';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      text-transform: uppercase;
+      color: var(--color-white);
+    }
+    .footer__socials {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      a {
+        display: inline-block;
+        margin-right: 1rem;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1250px) {
+    &__content {
+      padding: 1.5rem 0.5rem;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &__content {
+      display: block;
+      text-align: center;
+      .footer__socials {
+        margin-top: 1rem;
+        justify-content: center;
+      }
+    }
+  }
+}

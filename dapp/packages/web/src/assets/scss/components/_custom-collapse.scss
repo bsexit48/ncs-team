@@ -1,0 +1,23 @@
+.custom-collapse {
+  width: 352px;
+  height: 77px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  background-image: url('../../images/filter.png');
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__text {
+    font-family: 'SVN-Batman Forever Alternate';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--color-white);
+  }
+  &__content {
+    margin-top: 0.5rem;
+  }
+}

@@ -1,0 +1,113 @@
+.box-attributes {
+  box-sizing: border-box;
+  padding: 0px;
+  position: relative;
+  z-index: 0;
+}
+
+.box-attributes__content-data {
+  display: grid;
+  grid-gap: 20px 0px;
+  grid-template-columns: repeat(2, 1fr);
+
+  @media screen and (max-width: 480px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.box-attributes__content-data .item-info {
+  vertical-align: middle;
+  width: 282px;
+  height: 33px;
+  span {
+    display: inline-block;
+    font-family: 'Roboto mono', monospace;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 33px;
+    color: var(--color-white);
+    margin-left: 2rem;
+  }
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  background-image: url('../../svgs/attribute_bg.svg');
+  &:nth-child(2n) {
+    margin-left: -20px;
+  }
+  @media screen and (max-width: 480px) {
+    &:nth-child(2n) {
+      margin-left: 0px;
+    }
+  }
+}
+
+.skill-box {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-top: 20px;
+
+  &__info {
+    display: flex;
+    margin: 5px 0;
+
+    &__skill {
+      margin-left: 10px;
+      margin-top: 8px;
+
+      .title {
+        display: block;
+        color: #fff;
+        @extend .text-batman;
+      }
+      .desc {
+        color: #fff;
+      }
+    }
+
+    &__gem {
+      img {
+        width: 65px;
+        height: 65px;
+      }
+    }
+  }
+}
+
+.box-attributes-price {
+  display: flex;
+  align-items: center;
+}
+.box-attributes-price__circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--color-red);
+  margin-right: 1rem;
+}
+
+.box-attributes-price__detail {
+  text-transform: uppercase;
+  font-family: 'Red Hat Display';
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 26px;
+  display: flex;
+  align-items: flex-start;
+  color: var(--color-aqua);
+}
+
+.box-attributes-price__detail span {
+  text-transform: uppercase;
+  font-family: 'Red Hat Display';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  display: flex;
+  align-items: flex-start;
+  margin-right: 1rem;
+  color: var(--color-aqua);
+}

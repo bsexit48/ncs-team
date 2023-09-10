@@ -1,0 +1,78 @@
+:root {
+  --color-yellow: #ffd903;
+  --color-orange: #eaaa1f;
+  --color-blue: #029aff;
+  --color-blue-menu-nav: #05ffff;
+  --color-dark-button: #f5a308;
+
+  --color-linear-yellow-orange: linear-gradient(180deg, #ffd903 0%, #eaaa1f 100%);
+  --color-linear-blue: linear-gradient(180deg, #029aff 0%, #014a83 100%);
+  --color-linear-blue-200: linear-gradient(180deg, rgba(2, 154, 255, 0.9) 0%, rgba(1, 74, 131, 0.9) 100%);
+
+  --color-harvest-gold-500: rgba(209, 138, 3, 0.5);
+  --color-oharvest-gold-800: rgba(222, 150, 6, 0.8);
+  --color-pastel-orange: rgba(255, 176, 70, 0.5);
+
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-red: #ff0000;
+  --color-yellow-orange: #ffb046;
+  --color-green: #00ff1e;
+  --color-electric-violet: #df00f7;
+  --color-gray: #030303;
+  --color-aqua: #00d9f8;
+  --color-burnt: #ea6b66;
+  --color-midnight: #012046;
+  --color-alto: #dbdbdb;
+  --color-supernova: #face0b;
+  --color-buttercup: #f2bb16;
+  --color-perano: rgba(176, 203, 239, 0.8);
+  --color-wedgewood: rgba(78, 113, 160, 0.8);
+  --color-cornflower-blue: rgba(0, 217, 248, 0.5);
+  --color-zorba: #9f8e85;
+  --color-silver: #afafaf;
+  --color-light-gray: #9e9e9e;
+  --color-bali: rgba(141, 173, 176, 0.3);
+  --color-cascade: rgba(141, 173, 176, 0.5);
+
+  --color-blue-blur-500: rgba(23, 87, 165, 0.5);
+  --color-blue-blur-800: rgba(23, 87, 165, 0.8);
+  --color-light-blue: #00fff6;
+
+  --color-light-black: rgba(0, 0, 0, 0.5);
+  --color-light-black-200: rgba(0, 0, 0, 0.25);
+
+  --color-bg-green: radial-gradient(50% 50% at 50% 50%, #029605 0%, #024c03 100%);
+  --color-bg-green-element: #8bc51e;
+
+  --color-bg-blue: radial-gradient(50% 50% at 50% 50%, #03a2cd 0%, #03a2cd 0.01%, #02526c 100%);
+  --color-bg-blue-element: #e9564c;
+  --color-bg-blue-hover: #00adfe;
+
+  --color-bg-purple: radial-gradient(50% 50% at 50% 50%, #b503c9 0%, #61026c 100%);
+  --color-bg-purple-element: #24a7cf;
+
+  --color-bg-orange: radial-gradient(50% 50% at 50% 50%, #c0a201 0%, #6d5001 100%);
+  --color-bg-orange-element: #9f8e85;
+  --color-bg-orange-hover: #f8a400;
+
+  --color-bg-purple-blue: linear-gradient(103.6deg, #b005a6 0%, #44abb6 100%);
+  --color-bg-purple-blue-element: #9f8e85;
+  --color-bg-menu: rgba(23, 87, 165, 0.95);
+  --color-blur-white-500: rgba(255, 255, 255, 0.5);
+
+  --color-odd-row-table: rgba(255, 255, 255, 0.3);
+  --color-even-row-table: rgba(0, 0, 0, 0.3);
+  --color-text-table: #00d8fe;
+  --color-yellow-status: #fdfd02;
+  --color-green-status: #87ee00;
+  --color-red-status: #ff4b4b;
+  --color-gray-table: #e1e1e1;
+}
+
+$mobile-width: 480px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+$spacer: 10px;
+
+$max-content-width: 1280px;

@@ -1,0 +1,58 @@
+.price-range {
+  h3 {
+    font-family: 'SVN-Batman Forever Alternate';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: var(--color-white);
+  }
+  .price-input {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .price-input__min,
+    .price-input__max {
+      background: rgba(0, 216, 254, 0.21);
+      border: 1px solid var(--color-white);
+      padding: 1rem 0;
+      border-radius: 5px;
+      width: 120px;
+      text-align: center;
+    }
+    input {
+      font-family: 'SVN-Batman Forever Alternate';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: var(--color-white);
+      max-width: 120px;
+      background-color: transparent;
+      border: none;
+      text-align: center;
+      &:focus {
+        outline: none !important;
+      }
+      &::placeholder {
+        font-family: 'SVN-Batman Forever Alternate';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: var(--color-white);
+      }
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+    .price-input__cross {
+      width: 16px;
+      height: 3px;
+      background-color: var(--color-white);
+    }
+  }
+}

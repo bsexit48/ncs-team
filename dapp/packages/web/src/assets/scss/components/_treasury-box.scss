@@ -1,0 +1,47 @@
+.treasury-box {
+  &__image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 300px;
+    margin: 0 auto;
+    height: 414px;
+    text-align: center;
+    position: relative;
+    &.normal {
+      background-image: url('../../images/background-normal-box.png');
+    }
+    &.vip {
+      background-image: url('../../images/background-vip-box.png');
+    }
+    & > img {
+      margin: 3rem auto !important;
+    }
+  }
+  &__price {
+    font-family: 'SVN-Batman Forever Alternate';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 23.8142px;
+    line-height: 29px;
+    color: var(--color-white);
+    text-shadow: 0px 7.32743px 7.32743px #000000;
+    max-width: 180px;
+    width: 100%;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &__input {
+    max-width: 283px;
+    margin: 0.5rem auto;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 2rem;
+    &__actions {
+      max-width: 314px;
+      margin: 0.5rem auto;
+    }
+  }
+}

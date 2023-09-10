@@ -1,0 +1,188 @@
+.custom-button {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &.purple {
+    background-image: url('../../images/purple-button.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 182px;
+    height: 36px;
+    span {
+      display: inline-block;
+      height: 100%;
+      font-family: 'SVN-Batman Forever Alternate';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      color: var(--color-white);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &.blue {
+    background-image: url('../../images/blue-button.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 352px;
+    height: 77px;
+    span {
+      display: inline-block;
+      height: 100%;
+      font-family: 'SVN-Batman Forever Alternate';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 22px;
+      color: var(--color-white);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &.buy-box {
+    background-image: url('../../images/buy-box-button.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 310px;
+    height: 80px;
+    span {
+      display: inline-block;
+      height: 100%;
+      font-family: 'SVN-Batman Forever Alternate';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 29px;
+      text-transform: uppercase;
+      color: var(--color-white);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &.item-detail {
+    background-image: url('../../images/item-detail-button.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 476px;
+    height: 80px;
+    margin: 0 auto;
+    span {
+      display: inline-block;
+      height: 100%;
+      font-family: 'SVN-Batman Forever Alternate';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 29px;
+      text-transform: uppercase;
+      color: var(--color-white);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &.texted {
+    span {
+      font-family: 'SVN-Batman Forever Alternate';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 22px;
+      color: var(--color-white);
+    }
+  }
+  &.back {
+    background-image: url('../../images/back-button.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 128px;
+    height: 56px;
+  }
+  &.dark {
+    background-image: url('../../images/dark-button.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 446px;
+    height: 66px;
+    span {
+      display: inline-block;
+      font-family: 'SVN-Batman Forever Alternate';
+      font-style: normal;
+      margin-bottom: 0.5rem;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 29px;
+      text-transform: uppercase;
+      color: var(--color-dark-button);
+    }
+  }
+  &.green {
+    background-image: url('../../images/green-button.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 476px;
+    height: 93px;
+    span {
+      display: inline-block;
+      font-family: 'SVN-Batman Forever Alternate';
+      font-style: normal;
+      margin-bottom: 0.8rem;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 29px;
+      text-transform: uppercase;
+      color: var(--color-white);
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    &.item-detail {
+      background-size: contain;
+      width: 300px;
+      height: 64px;
+      align-items: flex-start;
+      span {
+        font-size: 16px;
+        display: inline-block;
+        margin-top: -1.5rem;
+      }
+    }
+
+    &.blue {
+      background-size: contain;
+      width: 300px;
+      height: 64px;
+      span {
+        font-size: 16px;
+        display: inline-block;
+        line-height: 60px;
+      }
+    }
+
+    &.dark {
+      background-size: contain;
+      width: 284px;
+      height: 64px;
+      margin: 0 auto;
+      span {
+        font-size: 16px;
+        display: inline-block;
+        margin-top: -1rem;
+      }
+    }
+    &.green {
+      background-size: contain;
+      width: 300px;
+      height: 64px;
+      span {
+        font-size: 16px;
+        display: inline-block;
+      }
+    }
+  }
+}
